@@ -1,0 +1,141 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\title{
+{Distributive Laws of Boolean Algebra}
+\thanks{Meer Tabres Ali as an intern with FWC IIT Hyderabad. *The author is with the Department of Electrical Engineering, Indian Institute of Technology, Hyderabad 502285 India e-mail: gadepall@iith.ac.in. All content in this manual is released under GNU GPL. Free and open source.}
+}
+\author{Meer Tabres Ali and G V V Sharma}
+\begin{document}
+\maketitle
+\section{ABSTRACT}
+\begin{flushleft}
+Distributive laws of Boolean Algebra are expressed by the following expressions.\\
+Distributive Law1: X.(Y+Z) = X.Y + X.Z \\
+Distributive Law2: X+YZ=(X+Y)(X+Z) \\
+In this program, for each law, Two LEDs are used for checking the output. For each law, the outputs of both RHS and LHS parts must be same with the random inputs.\\
+\end{flushleft}
+
+\subsection{Truth Table for Distributive Laws}
+Truth Table for Distributive Law1: X.(Y+Z) = X.Y + X.Z 
+
+\begin{table}[htbp]
+    \centering
+\begin{tabular}{ | c | c | c | c | c | c | c | c | } \hline
+X & Y & Z & Y+Z & X(Y+Z) & XY & XZ & XY+XZ \\\hline
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 0 & 1 & 1 & 1 & 0 & 1 & 1 \\
+1 & 1 & 0 & 1 & 1 & 1 & 0 & 1 \\
+1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\ \hline
+\end{tabular}
+\caption{\label{tab:widgets}Truth Table for Distributive Law1}
+\end{table}
+
+Truth Table for Distributive Law2: X+YZ=(X+Y)(X+Z)
+\begin{table}[htbp]
+    \centering
+\begin{tabular}{ | c | c | c | c | c | c | c | c | } \hline
+X & Y & Z & Y.Z & X+YZ & X+Y & X+Z & (X+Y)+(X+Z) \\\hline
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+1 & 0 & 0 & 0 & 1 & 1 & 1 & 1 \\
+1 & 0 & 1 & 0 & 1 & 1 & 1 & 1 \\
+1 & 1 & 0 & 0 & 1 & 1 & 1 & 1 \\
+1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\ \hline
+\end{tabular}
+\caption{\label{tab:widgets}Truth Table for Distributive Law2}
+\end{table}
+
+\section{COMPONENTS}
+Required components list has been given in Table III
+\begin{table}[h]
+\centering
+\begin{tabular}{| c | c | c |} \hline
+Components & Value & Quantity \\\hline
+Resistors & 220 ohm & 4 \\
+LEDs &  & 4 \\
+Arduino & UNO & 1 \\
+Jumper Wires &  & 20 \\
+Breadboard & & 1 \\ 
+\hline
+\end{tabular}
+\caption{\label{tab:widgets}Components}
+\end{table}
+\section{HARDWARE}
+\begin{flushleft}
+For Distributive Law1: X.(Y+Z) = X.Y + X.Z \\
+Make the connections between Arduino and LEDs as per the Table IV. Here LHS=X.(Y+Z) and RHS=X.Y+X.Z\\
+
+\begin{table}[h]
+\begin{tabular}{|c | c | c | c | c | c |} \hline
+ & \textbf{INPUT} & \textbf{INPUT} & \textbf{INPUT} & \textbf{OUTPUT} & \textbf{OUTPUT} \\\hline
+ & X & Y & Z & X(Y+Z) & XY+XZ \\ \hline
+Arduino & 2 & 3 & 4 & 5 & 6 \\ \hline
+LEDs &  &  &  & LED1 & LED2 \\ \hline
+\end{tabular}
+\caption{\label{tab:widgets}}
+\end{table}
+\end{flushleft}
+
+For Distributive Law2 X+YZ=(X+Y)(X+Z) \\
+Make the connections between Arduino and LEDs as per the Table V. Here LHS=X+YZ and RHS=(X+Y).(X+Z) \\
+
+\begin{table}[h]
+\begin{tabular}{|c | c | c | c | c | c |} \hline
+ & \textbf{INPUT} & \textbf{INPUT} & \textbf{INPUT} & \textbf{OUTPUT} & \textbf{OUTPUT} \\\hline
+ & X & Y & Z & X+(YZ) & (X+Y).(X+Z) \\ \hline
+Arduino & 2 & 3 & 4 & 7 & 8 \\ \hline
+LEDs &  &  &  & LED3 & LED4 \\ \hline
+\end{tabular}
+\caption{\label{tab:widgets}}
+\end{table}
+
+\section{SOFTWARE}
+\centering
+1. Download the codes given in the link below and execute them.\\
+
+\begin{table}[h]
+\centering
+\begin{tabular}{| c |} \hline
+ \rule{0pt}{20pt} https://github.com/meertabresali-FWC-IITH/project/blob/main/main.cpp \\\hline
+\end{tabular}
+\end{table}
+\begin{flushleft}
+2. Apply the inputs X, Y, and Z (either HIGH or LOW) to the Digital Pin no.s 2, 3 and 4 of Arduino as per the Truth tables (Table I for Distributive Law1 and Table II for Distributive Law2).
+\end{flushleft}
+
+\section{FINDINGS}
+\begin{flushleft}
+For Distributive Law1: X.(Y+Z) = X.Y + X.Z \\
+After the execution of codes, for different input variables (X, Y and Z), the output pins (5 and 6) of Arduino will be at the same level (both output pins will be at either HIGH or LOW simultaneously), and it causes both LEDs (LED1 and LED2) either to glow or off.\\
+For Distributive Law2: X+YZ=(X+Y)(X+Z) \\
+After the execution of codes, for different input variables (X, Y and Z), the output pins (7 and 8) of Arduino will be at the same level (both output pins will be at either HIGH or LOW simultaneously), and it causes both LEDs (LED3 and LED4) either to glow or off.\\
+\end{flushleft}
+\section{CONCLUSION}
+\begin{flushleft}
+1. Distributive law is expressed by \\
+Law1 X(Y+Z)=XY+XZ with LHS = X(Y+Z), RHS = XY+XZ, and \\
+Law2 X+YZ=(X+Y)(X+Z) with LHS= X+YZ, RHS=(X+Y).(X+Z)\\
+2. Codes are written for both Distributive laws and are executed.\\
+3. Result has been displayed on LEDs (i.e. LED1, LED2 for Law1 and LED3, LED4 for Law2). \\
+4. LED1, LED3 are assigned for LHS of the Boolean expression of Distributive Laws. \\
+5. LED2, LED4 are assigned for RHS of the Boolean expression of Distributive Laws. \\
+6. For random digital inputs X, Y and Z as per Truth tables (at Arduino digital pins 2, 3 and 4), it has been noticed that, \\
+For Law1 the output pins (5 and 6) of Arduino are at the same level, and for Law2 the output pins (7 and 8) of Arduino are at the same level
+\end{flushleft}
+\end{document}
