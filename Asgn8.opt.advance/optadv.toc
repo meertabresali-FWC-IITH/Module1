@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}Problem statement}{1}{}%
+\contentsline {section}{\numberline {2}Considerations}{1}{}%
+\contentsline {section}{\numberline {3}Plot to find maxima and minima of the function}{1}{}%
+\contentsline {section}{\numberline {4}Solution}{1}{}%
+\contentsline {subsection}{\numberline {4.1}Calculation of Maxima and Minima using normal differentiation}{1}{}%
+\contentsline {subsection}{\numberline {4.2}Calculation of Maxima using gradient ascent algorithm}{2}{}%
+\contentsline {subsection}{\numberline {4.3}Calculation of Minima using gradient descent algorithm}{2}{}%
+\contentsline {section}{\numberline {5}Software}{2}{}%
+\contentsline {section}{\numberline {6}Conclusion}{2}{}%
