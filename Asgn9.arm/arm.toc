@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}Problem statement}{1}{}%
+\contentsline {section}{\numberline {2}Abstract}{1}{}%
+\contentsline {section}{\numberline {3}Truth Table for Distributive Laws}{1}{}%
+\contentsline {section}{\numberline {4}Considerations}{1}{}%
+\contentsline {section}{\numberline {5}Logic diagram of gates}{1}{}%
+\contentsline {section}{\numberline {6}Solution}{2}{}%
+\contentsline {section}{\numberline {7}SOFTWARE}{2}{}%
+\contentsline {section}{\numberline {8}CONCLUSION}{2}{}%
